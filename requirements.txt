@@ -1,0 +1,11 @@
+# requirements.txt
+
+# Para os cadernos interativos do Jupyter
+jupyter
+
+# Biblioteca fundamental para visualização de dados, usada no livro
+matplotlib
+
+# Embora o livro ensine a fazer "do zero", estas bibliotecas são padrão no mercado
+numpy
+pandas
