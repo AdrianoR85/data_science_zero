@@ -1,0 +1,21 @@
+{
+  "name": "Data Science do Zero",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "context": "..",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter"
+  ],
+  "forwardPorts": [8888],
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+  "remoteUser": "root",
+  "mounts": [
+    "source=${localWorkspaceFolder}/notebooks,target=/app/notebooks,type=bind",
+    "source=${localWorkspaceFolder}/scratch,target=/app/scratch,type=bind"
+  ]
+}

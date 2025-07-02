@@ -13,6 +13,9 @@ WORKDIR /app
 COPY requirements.txt .
 COPY scratch/ ./scratch/
 
+# 🛠️ Instalar git
+RUN apt-get update && apt-get install -y git
+
 # 4. Instalar as Dependências
 # Executa o 'pip' para instalar as bibliotecas que listamos no requirements.txt.
 RUN pip install --no-cache-dir -r requirements.txt
