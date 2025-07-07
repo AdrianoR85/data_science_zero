@@ -11,10 +11,7 @@ WORKDIR /app
 # 3. Copiar os Arquivos para o Container
 # Copia o arquivo de dependências e a pasta com o código do livro para dentro do container.
 COPY requirements.txt .
-COPY scratch/ ./scratch/
 
-# 🛠️ Instalar git
-RUN apt-get update && apt-get install -y git
 
 # 4. Instalar as Dependências
 # Executa o 'pip' para instalar as bibliotecas que listamos no requirements.txt.
